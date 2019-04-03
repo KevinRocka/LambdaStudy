@@ -17,13 +17,13 @@ public class Lambda_1 {
     static String name[] = {"Json", "Wang", "Jackson", "Jack"};
 
     public static void main(String args[]) {
-//        startThreadNormal();
-//        startThreadLambda();
-//        normalSort();
-//        lambdaSort();
-//        normalOutput();
-//        lambdaOutput();
-//        normalCollections();
+        startThreadNormal();
+        startThreadLambda();
+        normalSort();
+        lambdaSort();
+        normalOutput();
+        lambdaOutput();
+        normalCollections();
         lambdaCollection();
     }
 

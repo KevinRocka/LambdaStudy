@@ -20,15 +20,21 @@ public class Lambda_2 {
     }
 
     public static void main(String args[]) {
-        //1.普通
+        //写法一.普通
         for (String s : strs) {
             System.out.println("output:" + s);
         }
-        //2.Lambda
+
+
+        //写法二.Lambda
         strs.forEach(x -> System.out.println(x));
-        //3.双冒号
+
+
+        //写法三.双冒号
         strs.forEach(Lambda_2::printStr);
-        //4.另外一种写法
+
+
+        //写法四.另外一种写法
         Consumer<String> methodParams = Lambda_2::printStr;
         strs.forEach(methodParams);
     }
