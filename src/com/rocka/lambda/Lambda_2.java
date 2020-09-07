@@ -1,6 +1,8 @@
 package com.rocka.lambda;
 
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
@@ -19,6 +21,7 @@ public class Lambda_2 {
         System.out.println("output:" + s1);
     }
 
+    @Test
     public static void main(String args[]) {
         //写法一.普通
         for (String s : strs) {

@@ -1,6 +1,8 @@
 package com.rocka.lambda;
 
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -17,20 +19,12 @@ import java.util.stream.Stream;
  */
 public class Lambda_3 {
 
-    public static void main(String args[]) {
-//        limit();
-//        skip();
-//        distinct();
-//        filter();
-//        map();
-//        flatMap();
-//        peek();
-    }
 
     /**
      * limit操作，获取其前N个元素，如果原Stream中包含的元素个数小于N，那就获取其所有的元素
      */
-    private static void limit() {
+    @Test
+    public static void limit() {
         List<String> str = new ArrayList<>();
         str.add("rocka");
         str.add("fever");
@@ -45,7 +39,8 @@ public class Lambda_3 {
     /**
      * skip操作,丢弃掉前n个元素,取剩下的元素
      */
-    private static void skip() {
+    @Test
+    public static void skip() {
         List<String> str = new ArrayList<>();
         str.add("l");
         str.add("x");
@@ -60,7 +55,8 @@ public class Lambda_3 {
     /**
      * distinct操作,去除流里重复的元素
      */
-    private static void distinct(){
+    @Test
+    public static void distinct(){
         List<String> str = new ArrayList<>();
         str.add("a");
         str.add("a");
@@ -75,7 +71,8 @@ public class Lambda_3 {
     /**
      * filter操作,过滤流里的元素,新生成的流只包含符合条件的元素
      */
-    private static void filter(){
+    @Test
+    public static void filter(){
         List<String> str = new ArrayList<>();
         str.add("coco");
         str.add("static");
@@ -90,7 +87,8 @@ public class Lambda_3 {
     /**
      * map操作,map主要是用于遍历每个参数，然后进行参数合并或者返回新类型的集合
      */
-    private static void map(){
+    @Test
+    public static void map(){
         List<String> str = new ArrayList<>();
         str.add("meg");
         str.add("ivan");
@@ -106,7 +104,8 @@ public class Lambda_3 {
     /**
      * flatmap操作,stream合并，所以合并集合优先实用这种方式
      */
-    private static void flatMap(){
+    @Test
+    public static void flatMap(){
         List<String> s1 = new ArrayList<>();
         s1.add("r");
         s1.add("o");
@@ -125,7 +124,8 @@ public class Lambda_3 {
     /**
      * peek操作, 生成一个包含原Stream的所有元素的新Stream，同时会提供一个消费函数（Consumer实例），新Stream每个元素被消费的时候都会执行给定的消费函数；
      */
-    private static void peek() {
+    @Test
+    public static void peek() {
         List<String> str = new ArrayList<>();
         str.add("rocka");
         str.add("fever");

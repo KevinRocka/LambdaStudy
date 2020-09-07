@@ -1,5 +1,7 @@
 package com.rocka.lambda;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -16,21 +18,11 @@ public class Lambda_1 {
 
     static String name[] = {"Json", "Wang", "Jackson", "Jack"};
 
-    public static void main(String args[]) {
-        startThreadNormal();
-        startThreadLambda();
-        normalSort();
-        lambdaSort();
-        normalOutput();
-        lambdaOutput();
-        normalCollections();
-        lambdaCollection();
-    }
-
     /**
      * 1.1 原始方法启动线程
      */
-    private static void startThreadNormal() {
+    @Test
+    public static void startThreadNormal() {
         Thread t1 = new Thread(new Runnable() {
             public void run() {
                 System.out.println("....原始方法启动线程....");
@@ -42,7 +34,8 @@ public class Lambda_1 {
     /**
      * 1.2 使用Lambda表达式启动线程
      */
-    private static void startThreadLambda() {
+    @Test
+    public static void startThreadLambda() {
         Thread t1 = new Thread(() -> System.out.println("......使用Lambda表达式启动线程....."));
         t1.start();
     }
@@ -54,7 +47,8 @@ public class Lambda_1 {
      * 输出为-1，代表o1小于o2;
      * 输出为0,代表相等;
      */
-    private static void normalSort() {
+    @Test
+    public static void normalSort() {
         Student s1 = new Student(27, "小卡");
         Student s2 = new Student(25, "小雨");
 
@@ -73,7 +67,8 @@ public class Lambda_1 {
     /**
      * 2.2 使用Lambda进行排序
      */
-    private static void lambdaSort() {
+    @Test
+    public static void lambdaSort() {
         Student s1 = new Student(27, "小卡");
         Student s2 = new Student(25, "小雨");
 
@@ -85,7 +80,8 @@ public class Lambda_1 {
     /**
      * 3.1 自定义匿名内部类
      */
-    private static void normalOutput() {
+    @Test
+    public static void normalOutput() {
         SumFactory foodFactory = new SumFactory() {
             @Override
             public int makeFood(int a, int b) {
@@ -98,7 +94,8 @@ public class Lambda_1 {
     /**
      * 3.2 使用Lambda表达式
      */
-    private static void lambdaOutput() {
+    @Test
+    public static void lambdaOutput() {
         SumFactory factory = (x, y) -> (x + y);
         factory.makeFood(3, 4);
     }
@@ -106,7 +103,8 @@ public class Lambda_1 {
     /**
      * 4.1 使用普通方式操作集合
      */
-    private static void normalCollections() {
+    @Test
+    public static void normalCollections() {
         List<String> names = Arrays.asList(name);
         for (String tmp : names) {
             System.out.println(tmp);
@@ -116,7 +114,8 @@ public class Lambda_1 {
     /**
      * 4.2 使用Lambda表达式操作集合
      */
-    private static void lambdaCollection() {
+    @Test
+    public static void lambdaCollection() {
         List<String> names = Arrays.asList(name);
         names.forEach((name) -> System.out.println(name));
 
